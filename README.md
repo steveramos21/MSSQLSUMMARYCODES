@@ -1,1 +1,2 @@
 # MSSQLSUMMARYCODES
+This will hold all the MSSQLSUMMARY.COM CODES
