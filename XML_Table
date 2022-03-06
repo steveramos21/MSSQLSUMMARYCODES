@@ -1,0 +1,13 @@
+CREATE TABLE XMLwithOpenXML
+(
+    Id INT IDENTITY PRIMARY KEY,
+    XMLData XML,
+    LoadedDateTime DATETIME
+)
+
+
+
+INSERT INTO XMLwithOpenXML
+    (XMLData, LoadedDateTime)
+SELECT CONVERT(XML, BulkColumn) AS BulkColumn, GETDATE()
+FROM OPENROWSET(BULK 'D:\OpenXMLTesting.xml', SINGLE_BLOB) AS x;
